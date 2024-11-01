@@ -13,8 +13,11 @@ const LetterGrid = ({secretWord, guessedLetters, answerLength, complete})=>{
   */
   useEffect(()=>{
     if(answerLength > 0 && answer === answerLength){
-      alert('정답입니다.')
-      complete();
+      const timeout = setTimeout(() => {
+        alert('정답입니다.');
+        complete();
+      }, 0);
+      return () => clearTimeout(timeout);
     }
   },[answer, answerLength, complete])
   
