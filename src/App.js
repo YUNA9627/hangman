@@ -9,7 +9,7 @@ import {
 
 function App() {
   const [maxError, setMaxError] = useState(0);
-  const [answerLength, setAnswerLength] = useState(3)
+  const [answerLength, setAnswerLength] = useState(0)
   const [secretWord, setSecretWord] = useState('');
 
   useEffect(()=>{
@@ -19,7 +19,7 @@ function App() {
       setAnswerLength(word.length);
       setMaxError(word.length + 2);
     }else{
-      setAnswerLength(3);
+      setAnswerLength(0);
       setMaxError(1);
     }
   },[]);
