@@ -37,8 +37,8 @@ function App() {
       </h1>
       <p className="game">Do you want to play Game?</p>
       <Routes>
-        <Route path="/" element={<GameBoard secretWord={secretWord} maxError={maxError} answerLength={answerLength}/>} />
-        <Route path="/admin" element={<SetWord />} />
+        <Route path="./" element={<GameBoard secretWord={secretWord} maxError={maxError} answerLength={answerLength}/>} />
+        <Route path="./admin" element={<SetWord />} />
       </Routes> 
     </div>
   );
